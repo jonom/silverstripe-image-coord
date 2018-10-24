@@ -1,0 +1,8 @@
+---
+Name: image-coord-field
+---
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - 'jonom/silverstripe-image-coord: client/css/ImageCoordField.css'
+  extra_requirements_javascript:
+    - 'jonom/silverstripe-image-coord: client/javascript/ImageCoordField.js'
