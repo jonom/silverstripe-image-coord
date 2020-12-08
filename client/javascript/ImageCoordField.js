@@ -23,8 +23,8 @@
 				var bgOffset = Math.floor(-backgroundWH / 2);
 				var fieldW = grid.width();
 				var fieldH = grid.height();
-				var leftBG = bgOffset + ((focusX / 2 + .5) * fieldW);
-				var topBG = bgOffset + ((-focusY / 2 + .5) * fieldH);
+				var leftBG = this.data('cssGrid') ? bgOffset + (focusX * fieldW) : bgOffset + ((focusX / 2 + .5) * fieldW);
+				var topBG = this.data('cssGrid') ? bgOffset + (focusY * fieldH) : bgOffset + ((-focusY / 2 + .5) * fieldH);
 
 				// Line up crosshairs with click position
 				grid.css('background-position', leftBG + 'px ' + topBG + 'px');
@@ -37,8 +37,8 @@
 				// Calculate ImageCoord coordinates
 				var offsetX = e.pageX - grid.offset().left;
 				var offsetY = e.pageY - grid.offset().top;
-				var focusX = (offsetX / fieldW - .5) * 2;
-				var focusY = (offsetY / fieldH - .5) * -2;
+				var focusX = this.data('cssGrid') ? offsetX / fieldW : (offsetX / fieldW - .5) * 2;
+				var focusY = this.data('cssGrid') ? offsetY / fieldH : (offsetY / fieldH - .5) * -2;
 
 				// Pass coordinates to form fields
 				this.getCoordField('x').val(focusX);

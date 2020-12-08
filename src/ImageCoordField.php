@@ -26,23 +26,7 @@ class ImageCoordField extends FieldGroup
      */
     private static $debug = false;
 
-    /**
-     * Maximum width of preview image
-     *
-     * @var integer
-     * @config
-     */
-    private static $max_width = 300;
-
-    /**
-     * Maximum height of preview image
-     *
-     * @var integer
-     * @config
-     */
-    private static $max_height = 150;
-
-    public function __construct($name, $xFieldName, $yFieldName, $imageURL, $width, $height)
+    public function __construct($name, $xFieldName, $yFieldName, $imageURL, $width, $height, $cssGrid = false)
     {
         // Create the fields
         $previewImage = ArrayData::create([
@@ -51,6 +35,7 @@ class ImageCoordField extends FieldGroup
             'URL' => $imageURL,
             'XFieldName' => $xFieldName,
             'YFieldName' => $yFieldName,
+            'CSSGrid' => $cssGrid,
         ]);
         $fields = array(
             LiteralField::create('ImageCoordGrid', $previewImage->renderWith('JonoM\ImageCoord\ImageCoordGrid')),
