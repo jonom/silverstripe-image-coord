@@ -20,7 +20,6 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	box-shadow: inset 0px 1px 5px rgba(0,0,0,0.3);
 	background: transparent url(focus-field.png) no-repeat center center;
 	-webkit-transition: background 0.1s ease;
 	-moz-transition: background 0.1s ease;
@@ -29,7 +28,7 @@
 }
 
 .image-coord-fieldgroup .field.form__fieldgroup-item {
-	display: none;
+	display: block;
 }
 
 .image-coord-fieldgroup.debug .field.form__fieldgroup-item {

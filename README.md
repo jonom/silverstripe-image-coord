@@ -1,5 +1,10 @@
 # ImageCoord field
 
+
+![responsive](https://github.com/seppzzz/silverstripe-image-coord/assets/1069249/54a0ecb3-3ba7-49e9-bd1b-1fc1f98b1ef7)
+
+
+
 This is a variant of SilverStripe FocusPoint field, allowing you to use a similar interface for setting x and y coords on a DataObject by clicking on an image.
 
 Not documented currently because I wasn't sure if it would be used outside of one or two projects 😄. If you're wanting to use it and need some help, please raise an issue.
