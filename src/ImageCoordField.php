@@ -32,14 +32,14 @@ class ImageCoordField extends FieldGroup
         $previewImage = ArrayData::create([
             'Width' => $width,
             'Height' => $height,
-			'Image' => $image,
-			'XYSumFieldName' => $xySumFieldName,
+						'Image' => $image,
+						'XYSumFieldName' => $xySumFieldName,
             'XFieldName' => $xFieldName,
             'YFieldName' => $yFieldName,
             'CSSGrid' => $cssGrid,
         ]);
         $fields = array(
-			$sumField = LiteralField::create($xySumFieldName, '<br><div class="sumField">mouseX 0.0 / mouseY 0.0</div><br>'),
+						$sumField = LiteralField::create($xySumFieldName, '<br><div class="sumField">mouseX 0.0 / mouseY 0.0</div><br>'),
             LiteralField::create('ImageCoordGrid', $previewImage->renderWith('JonoM\ImageCoord\ImageCoordGrid')),
             TextField::create($xFieldName),
             TextField::create($yFieldName),
