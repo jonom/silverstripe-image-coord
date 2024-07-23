@@ -20,7 +20,7 @@
 				var focusY = grid.getCoordField('y').val();
 
 				// Calculate background positions
-				var backgroundWH = 605; // Width and height of grid background image
+				var backgroundWH = 1405; // Width and height of grid background image
 				var bgOffset = Math.floor(-backgroundWH / 2);
 				var fieldW = img.width();
 				var fieldH = img.height();
