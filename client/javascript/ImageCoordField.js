@@ -13,6 +13,7 @@
 			},
 			updateGrid: function () {
 				var grid = $(this);
+				var img = grid.prev("img");
 
 				// Get coordinates from text fields
 				var focusX = grid.getCoordField('x').val();
@@ -21,8 +22,8 @@
 				// Calculate background positions
 				var backgroundWH = 605; // Width and height of grid background image
 				var bgOffset = Math.floor(-backgroundWH / 2);
-				var fieldW = grid.width();
-				var fieldH = grid.height();
+				var fieldW = img.width();
+				var fieldH = img.height();
 				var leftBG = this.data('cssGrid') ? bgOffset + (focusX * fieldW) : bgOffset + ((focusX / 2 + .5) * fieldW);
 				var topBG = this.data('cssGrid') ? bgOffset + (focusY * fieldH) : bgOffset + ((-focusY / 2 + .5) * fieldH);
 
