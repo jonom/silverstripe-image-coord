@@ -2,13 +2,11 @@
 
 namespace JonoM\ImageCoord;
 
-use SilverStripe\Assets\Image;
 use SilverStripe\Control\Director;
 use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\TextField;
-use SilverStripe\View\ArrayData;
-use SilverStripe\View\Requirements;
+use SilverStripe\Model\ArrayData;
 
 /**
  * ImageCoordField class.
